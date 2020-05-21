@@ -2,9 +2,9 @@ import React from 'react';
 import Card from './Card';
 
 
-const CardList = (props) => (
+const CardList = ({ profiles }) => (
 	<div>
-  	{props.profiles.map(profile => <Card key={profile.id} {...profile}/>)}
+  	{profiles.map(profile => <Card key={profile.id} {...profile}/>)}
 	</div>
 );
 

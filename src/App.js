@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from './CardList'
 import Form from './Form';
 import axios from 'axios';
+import './App.scss'
 
 class App extends Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <div className='header'>The GitHub Cards Ap"</div>
+                <div className='header'>The GitHub Cards Ap</div>
                 <Form userName={this.state.userName} handleInputChange={this.handleChange} handleInputSubmit={this.handleSubmit} />
                 <CardList profiles={this.state.profiles} />
             </div>

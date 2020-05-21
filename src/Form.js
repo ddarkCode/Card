@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './Form.scss'
 
-
-
-class Form extends Component {
+const Form = ({ handleInputChange, handleInputSubmit, userName}) => {	
 	
-	render() {
   	return (
-    	<form onSubmit={this.props.handleInputSubmit}>
+    	<form onSubmit={handleInputSubmit}>
     	  <input 
           type="text" 
-          value={this.props.userName}
-          onChange={this.props.handleInputChange}
+          value={userName}
+          onChange={handleInputChange}
           placeholder="GitHub username" 
           required 
         />
@@ -18,7 +16,7 @@ class Form extends Component {
     	</form>
     );
   }
-}
+
 
 
     

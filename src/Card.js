@@ -1,19 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react';
+import './Card.scss';
 
-class Card extends Component {
-	render() {
-  	const profile = this.props;
+const Card = ({ avatar_url, name, company }) => {
   	return (
     	<div className="github-profile">
-    	  <img alt='github profile' src={profile.avatar_url} />
+    	  <img alt='github profile' src={avatar_url} />
         <div className="info">
-          <div className="name">{profile.name}</div>
-          <div className="company">{profile.company}</div>
+          <div className="name">{name}</div>
+          <div className="company">{company}</div>
         </div>
     	</div>
     );
   }
-}
   
 
 
